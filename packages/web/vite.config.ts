@@ -36,6 +36,7 @@ export default defineConfig(({ mode }) => {
   const useHTTPS = env.VITE_USE_HTTPS === "true";
 
   return {
+    base: '/web_client/', 
     plugins: [
       react(),
       tailwindcss(),
