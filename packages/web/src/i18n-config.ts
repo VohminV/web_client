@@ -29,8 +29,8 @@ i18next
   .use(LanguageDetector)
   .init({
     backend: {
-      // With this setup, {{lng}} will correctly resolve to 'en-US', 'fi-FI', etc.
-      loadPath: "/i18n/locales/{{lng}}/{{ns}}.json",
+      // ✅ ИСПРАВЛЕНО: используем BASE_URL из Vite для корректных путей на GitHub Pages
+      loadPath: `${import.meta.env.BASE_URL}i18n/locales/{{lng}}/{{ns}}.json`,
     },
     react: {
       useSuspense: true,
